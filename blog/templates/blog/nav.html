@@ -1,0 +1,92 @@
+<!-- Sidebar -->
+
+			<div id="sidebar">
+
+				<!-- Logo -->
+					<h1 id="logo"><a>隨便說說</a></h1>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li class="current"><a href="{% url 'blog:index' %}">首頁</a></li>
+							<li><a href="{% url 'blog:tag' pk=1%}">生活雜談</a></li>
+							<li><a href="{% url 'blog:tag' pk=2%}">讀書亂談</a></li>
+                            <li><a href="{% url 'blog:tag' pk=3%}">程式學習</a></li>
+						</ul>
+					</nav>
+
+				<!-- Search -->
+{#					<section class="box search">#}
+{#						<form method="post" action="#">#}
+{#							<input type="text" class="text" name="search" placeholder="Search" />#}
+{#						</form>#}
+{#					</section>#}
+
+				<!-- Text -->
+					<section class="box text-style1">
+						<div class="inner">
+							<p>
+								<strong>秦客說:</strong> 一個月減一公斤，十二個月也只能減十二公斤啊
+							</p>
+						</div>
+					</section>
+
+				<!-- Recent Posts -->
+{#					<section class="box recent-posts">#}
+{#						<header>#}
+{#							<h2>Recent Posts</h2>#}
+{#						</header>#}
+{#						<ul>#}
+{#                            {% for list in object_list %}#}
+{#							<li><a href="#">{{ list.tittle }}</a></li>#}
+{#                            {% endfor %}#}
+{#							<li><a href="#">Feugiat nisl aliquam</a></li>#}
+{#							<li><a href="#">Sed dolore magna</a></li>#}
+{#							<li><a href="#">Malesuada commodo</a></li>#}
+{#							<li><a href="#">Ipsum metus nullam</a></li>#}
+{#						</ul>#}
+{#					</section>#}
+
+				<!-- Recent Comments -->
+{#					<section class="box recent-comments">#}
+{#						<header>#}
+{#							<h2>Recent Comments</h2>#}
+{#						</header>#}
+{#						<ul>#}
+{#							<li>case on <a href="#">Lorem ipsum dolor</a></li>#}
+{#							<li>molly on <a href="#">Sed dolore magna</a></li>#}
+{#							<li>case on <a href="#">Sed dolore magna</a></li>#}
+{#						</ul>#}
+{#					</section>#}
+
+				<!-- Calendar -->
+					<section class="box calendar">
+						<div class="inner">
+							<table>
+{#								<caption>歡迎聯絡</caption>#}
+								<thead>
+									<tr>
+										<th scope="col" title="Monday">關於作者</th>
+									</tr>
+                                </thead>
+                                <tr  >
+                                    <div align=center>
+                                    <a href="https://www.facebook.com/weilongchin">
+                                        <img class="img" align=center src="https://badge.facebook.com/badge/100000045396834.3195.730971856.png"  />
+                                    </a>
+                                    </div>
+                                    <br />
+                                </tr>
+
+
+
+							</table>
+						</div>
+					</section>
+
+				<!-- Copyright -->
+					<ul id="copyright">
+						<li>連絡信箱: </li><li><a href="">weilongchin@gmail.com</a></li>
+					</ul>
+
+			</div>

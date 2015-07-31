@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>秦客隨便說</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="{% static 'blog/assets/js/ie/html5shiv.js' %}"></script><![endif]-->
+		<link rel="stylesheet" href="{% static 'blog/assets/css/main.css' %}" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="{% static 'blog/assets/css/ie8.css' %}" /><![endif]-->
+	</head>
+	<body>
+    {% block index %}
+    {% endblock %}
+
+
+    {% include "blog/nav.html" %}
+
+
+
+			<script src="{% static 'blog/assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'blog/assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'blog/assets/js/util.js' %}"></script>
+			<!--[if lte IE 8]><script src="{% static 'blog/assets/js/ie/respond.min.js' %}"></script><![endif]-->
+			<script src="{% static 'blog/assets/js/main.js' %}"></script>
+
+	</body>
+</html>

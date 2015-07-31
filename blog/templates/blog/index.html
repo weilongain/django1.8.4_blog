@@ -1,0 +1,54 @@
+{% extends "blog/base.html" %}
+{% load django_markdown %}
+{% block index %}
+
+
+
+		<!-- Content -->
+			<div id="content">
+				<div class="inner">
+
+					<!-- Post -->
+                        {% for post in object_list %}
+						<article class="box post post-excerpt">
+							<header>
+
+								<h2><a href="{% url 'blog:blogpost' pk=post.id %}">{{ post.tittle }}</a></h2>
+								<p>{{ post.tittle_sm }}</p><a href="{% url 'blog:tag' pk=post.tag.id %}">{{ post.tag }}</a>
+							</header>
+							<div class="info">
+
+								<span class="date"> <span class="day">{{ post.pub_date.day }}</span><span class="month">{{ post.pub_date.month }}月</span><span class="year">, {{ post.pub_date.year }}年</span></span>
+
+								<ul class="stats">
+{#									<li><a href="#" class="icon fa-comment">16</a></li>#}
+{#									<li><a href="#" class="icon fa-heart">32</a></li>#}
+{#									<li><a href="#" class="icon fa-twitter">64</a></li>#}
+{#									<li><a href="#" class="icon fa-facebook">128</a></li>#}
+								</ul>
+							</div>
+{#							<a href="#" class="image featured"><img src="{% static 'blog/images/pic01.jpg' %}" alt="" /></a>#}
+							<p>{{ post.body|markdown}}</p>
+						</article>
+                        {% endfor %}
+
+					<!-- Pagination -->
+						<div class="pagination">
+							<!--<a href="#" class="button previous">Previous Page</a>-->
+                             {% if page_obj.has_previous %}
+                                 <a href="?page={{ page_obj.previous_page_number }}" class="button next">上一頁</a>
+                             {% endif %}
+							<div class="pages">
+								{{ page_obj.number }} 頁 / {{ paginator.num_pages }}頁
+							</div>
+                            {% if page_obj.has_next %}
+							    <a href="?page={{ page_obj.next_page_number }}" class="button next">下一頁</a>
+                            {% endif %}
+						</div>
+
+				</div>
+			</div>
+
+
+
+{% endblock %}
